@@ -1,0 +1,25 @@
+/* just to be able to see the div, this is your starting point*/
+/* You can create your own classess, animations etc*/
+#to-be-animated {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+/*Yukarıya zıplama animasyonu hazırlandı. */
+@keyframes up-down {
+  0% {
+      top: 50%;
+  }
+  50% {
+      top: calc(0% + 100px); /* calc fonksiyonu ile verdiğimiz margin değerini ekleyerek sayfa üstüne kadar yükselmesi sağlandı*/
+  }
+  100% {
+      top: 50%;
+  }
+}

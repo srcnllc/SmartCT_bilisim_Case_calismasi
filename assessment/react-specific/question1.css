@@ -1,0 +1,44 @@
+/* Do a basic table styling for borders, doesn't need to be exactly same with the gif */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+}
+table{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(rgb(126, 125, 125), rgb(126, 125, 125), rgb(126, 125, 125), .5);
+    color: black;
+    border: 1px solid blue;
+    padding: 15px;
+    border-collapse: collapse;
+}
+table td,table th{
+    border: 1px solid #ddd;
+    padding: 5px 0;
+}
+table th{
+    background-color:gray;
+}
+table td{
+    text-align: left;
+    padding-left: 5px;
+}
+table tbody td:nth-child(1){
+    text-align: center;
+    font-weight: bold;
+}
+.buttons{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: right;
+}
+.buttons button{
+    margin-left: 15px;
+    padding: 5px;
+}
