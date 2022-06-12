@@ -6,6 +6,7 @@ function doExpensiveTask(input) {
   console.log("Doing expensive task...:", result);
   return result;
 }
+
 function optimizeFunction(func) {
   // You shouldn't need to edit anywhere else
   // Do your work inside this function
