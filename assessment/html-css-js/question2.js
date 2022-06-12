@@ -6,14 +6,13 @@ function doExpensiveTask(input) {
   console.log("Doing expensive task...:", result);
   return result;
 }
-
 function optimizeFunction(func) {
   // You shouldn't need to edit anywhere else
   // Do your work inside this function
   // SOLUTION:
     let cache = []
     let divisionNum
-    switch(fn.name){
+    switch(func.name){
         case "doExpensiveTask":
             divisionNum = 2;
             break
@@ -21,9 +20,9 @@ function optimizeFunction(func) {
             divisionNum = 10
             break;
     }
-    return function(val) => {
+    return function(val) {
         if(cache.length == 0){
-                cache.push(fn(val))
+                cache.push(func(val))
                 return;
         }
         if(cache[0]){
@@ -33,18 +32,16 @@ function optimizeFunction(func) {
                 console.log(result+" "+"from cache")
             }else{
                 cache.pop()
-                cache.push(fn(val))
+                cache.push(func(val))
             }
 
         }
 
          
-
+    }
     
 }
 
-
-}
 // anOptimizedFunc shouldn't execute the expensive task if new input is same as the previous one
 const anOptimizedFunc = optimizeFunction(doExpensiveTask);
 anOptimizedFunc(2); // Should print: Doing expensive task...: 4
